@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -128,8 +128,8 @@
                 <span style="font-size:9px;color:#fff;font-family:monospace;background:rgba(0,0,0,0.7);padding:2px 4px;">VERIFY REQUIRED</span>
             </div>
             <div style="position:absolute;bottom:10px;left:10px;right:10px;display:flex;justify-content:space-between;">
-                <div class="hud-badge" style="color:var(--accent-pink);" id="hudHR">â¤ï¸ HR: 72 BPM | SpO2: 98%</div>
-                <div class="hud-badge" style="color:var(--accent-amber);" id="hudPres">ðŸ“Š 1013 hPa | Alt: 412m</div>
+    document.getElementById('hudHR').textContent   = 'HR: '+Math.round(simHR)+' BPM | SpO2: '+simSpo2.toFixed(0)+'%';
+    document.getElementById('hudPres').textContent = 'BARO: '+simPres.toFixed(0)+' hPa | Alt: '+simAlt.toFixed(0)+'m';
             </div>
         </div>
 
@@ -139,7 +139,7 @@
             <!-- ATMOSPHERIC -->
             <div class="card">
                 <div class="card-title">
-                    <span>ðŸŒ«ï¸ Atmospheric (MQ-135 + BMP280)</span>
+                    <span>&#127787;&#65039; ATMOSPHERIC (MQ-135 + BMP280)</span>
                     <span id="gasStatus" style="color:var(--accent-green);">SAFE</span>
                 </div>
                 <div class="metric-grid">
@@ -165,7 +165,7 @@
             <!-- SURVIVOR VITALS â€” MAX30102 -->
             <div class="card" style="border-color:rgba(255,64,129,0.4);">
                 <div class="card-title">
-                    <span>â¤ï¸ Survivor Vitals (MAX30102)</span>
+                    <span>&#10084;&#65039; SURVIVOR VITALS (MAX30102)</span>
                     <span id="vitalsStatus" style="color:var(--accent-pink);">SCANNING</span>
                 </div>
                 <div class="metric-grid">
@@ -178,13 +178,13 @@
                         <div class="vitals-value" id="spo2Val">98 <small style="font-size:12px;">%</small></div>
                     </div>
                 </div>
-                <div style="margin-top:8px;font-size:10px;color:rgba(255,64,129,0.7);text-align:center;">âš ï¸ Place sensor within 2cm of survivor skin for accurate reading</div>
+                <div style="margin-top:8px;font-size:10px;color:rgba(255,64,129,0.7);text-align:center;">&#9888;&#65039; Place sensor within 2cm of survivor skin for accurate reading</div>
             </div>
 
             <!-- CLIMATE -->
             <div class="card">
                 <div class="card-title">
-                    <span>ðŸŒ¡ï¸ Climate (DHT11 + DS18B20)</span>
+                    <span>&#127777;&#65039; CLIMATE (DHT11 + DS18B20)</span>
                 </div>
                 <div class="metric-grid">
                     <div class="metric-card">
@@ -209,7 +209,7 @@
             <!-- KINEMATICS -->
             <div class="card">
                 <div class="card-title">
-                    <span>ðŸ“ Kinematics (MPU6500 IMU)</span>
+                    <span>&#128208; KINEMATICS (MPU6500 IMU)</span>
                     <span id="imuStatus" style="color:var(--accent-cyan);">STABLE</span>
                 </div>
                 <div class="metric-grid">
@@ -702,10 +702,10 @@ function updateSim() {
 
     document.getElementById('hrVal').textContent   = Math.round(simHR) + ' BPM';
     document.getElementById('spo2Val').textContent = simSpo2.toFixed(1) + ' %';
-    document.getElementById('hudHR').textContent   = 'â¤ï¸ HR: '+Math.round(simHR)+' BPM | SpO2: '+simSpo2.toFixed(0)+'%';
+    document.getElementById('hudHR').textContent   = 'HR: '+Math.round(simHR)+' BPM | SpO2: '+simSpo2.toFixed(0)+'%';
     document.getElementById('presVal').textContent = simPres.toFixed(0);
     document.getElementById('altVal').textContent  = simAlt.toFixed(0);
-    document.getElementById('hudPres').textContent = 'ðŸ“Š '+simPres.toFixed(0)+' hPa | Alt: '+simAlt.toFixed(0)+'m';
+    document.getElementById('hudPres').textContent = 'BARO: '+simPres.toFixed(0)+' hPa | Alt: '+simAlt.toFixed(0)+'m';
     document.getElementById('distVal').textContent = Math.round(simDist);
 
     const imuOk = true;
