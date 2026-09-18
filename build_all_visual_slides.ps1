@@ -1,4 +1,5 @@
-﻿$pptPath = "C:\Users\manoj\.gemini\antigravity\scratch\ARIES\docs\sih\SIH2026_ARIES_ALPHA-X.pptx"
+﻿# SIH 2026 Slide Deck Generator
+$pptPath = "C:\Users\manoj\.gemini\antigravity\scratch\ARIES\docs\sih\SIH2026_ARIES_ALPHA-X.pptx"
 $outDir  = "C:\Users\manoj\.gemini\antigravity\scratch\ARIES\docs\sih\slides_png"
 if (!(Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir -Force }
 
@@ -88,7 +89,7 @@ if (Test-Path $img1) { $s1.Shapes.AddPicture($img1, [Microsoft.Office.Core.MsoTr
 
 $bot1 = $s1.Shapes.AddShape(1, 0, 485, 960, 55); $bot1.Fill.Solid(); $bot1.Fill.ForeColor.RGB = 0x20150F; $bot1.Line.Visible = [Microsoft.Office.Core.MsoTriState]::msoFalse
 $botText = $s1.Shapes.AddTextbox(1, 40, 495, 880, 35)
-$botText.TextFrame.TextRange.Text = "Team: ALPHA-X   |   Theme: Disaster Management   |   PS ID: SIH26223   |   Category: Hardware & Edge AI"
+$botText.TextFrame.TextRange.Text = "Team: ALPHA-X   |   PS ID: SIH26223   |   GitHub: github.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover"
 $botText.TextFrame.TextRange.Font.Size = 12; $botText.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $botText.TextFrame.TextRange.Font.Color.RGB = $cAmber
 
 # ========================================================
@@ -226,7 +227,7 @@ $s6Cards = @(
     @{Icon="📚"; Title="Academic USAR Robotics Literature"; Points="• Murphy, R. R. (2014) Disaster Robotics, MIT Press / IEEE Transactions.`r`n• Kumar & Sharma (2022) IoT USAR Ground Vehicles, IEEE Xplore / ICRA."},
     @{Icon="📡"; Title="Sub-GHz Radio Mesh & Thermal AI Papers"; Points="• IEEE IoT Journal: Sub-GHz Wireless Mesh for Deep-Rubble Disaster Telemetry.`r`n• Journal of Field Robotics (Springer): Multi-Spectral Thermal Fusion in Fire Zones."},
     @{Icon="🏛️"; Title="National Disaster Guidelines (Govt. of India)"; Points="• NDMA Guidelines on Urban Search & Rescue (USAR) Equipment Benchmarks.`r`n• NDRF Standard Operating Procedures (SOP) for Confined Space Entry."},
-    @{Icon="⚙️"; Title="Industry Protocols & Communication Standards"; Points="• LoRa Alliance: LoRaWAN Sub-GHz Mesh Specifications (868/915 MHz).`r`n• 3GPP TS 27.007: Cellular AT Command Standard for Emergency Alert Dispatch."}
+    @{Icon="💻"; Title="Open-Source GitHub Repository & Live Mission Hub"; Points="• GitHub: github.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover`r`n• Live Web Dashboard: joyful-cactus-9b247c.netlify.app"}
 )
 for ($i=0; $i -lt $s6Cards.Count; $i++) {
     $y = 66 + ($i * 96)
@@ -242,7 +243,7 @@ if (Test-Path $img6) { $s6.Shapes.AddPicture($img6, [Microsoft.Office.Core.MsoTr
 
 $bot6 = $s6.Shapes.AddShape(1, 0, 485, 960, 55); $bot6.Fill.Solid(); $bot6.Fill.ForeColor.RGB = 0x20150F; $bot6.Line.Visible = [Microsoft.Office.Core.MsoTriState]::msoFalse
 $botText6 = $s6.Shapes.AddTextbox(1, 30, 495, 900, 35)
-$botText6.TextFrame.TextRange.Text = "Grounded in Authoritative Standards: Aligned with NDMA national safety benchmarks and peer-reviewed USAR robotics research."
+$botText6.TextFrame.TextRange.Text = "Official Repo: github.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover   |   Live Console: joyful-cactus-9b247c.netlify.app"
 $botText6.TextFrame.TextRange.Font.Size = 11; $botText6.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $botText6.TextFrame.TextRange.Font.Color.RGB = $cAmber
 
 # Save Presentation
