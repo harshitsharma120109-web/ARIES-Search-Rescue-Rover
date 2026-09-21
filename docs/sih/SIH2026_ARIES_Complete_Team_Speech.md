@@ -1,244 +1,214 @@
 # 🎙️ SMART INDIA HACKATHON 2026 — OFFICIAL TEAM PITCH SCRIPT
 ## Team ALPHA-X | Problem Statement: SIH26223 | Project: ARIES
 **Presentation Date:** 22 September 2026 | **Time Slot:** 1:00 PM – 3:00 PM | **Room:** 440
-**Target Total Pitch Time:** 5:30 to 6:00 Minutes (~60 Seconds per Speaker)
+**Target Total Pitch Time:** 5:30 to 6:00 Minutes (~50-60 Seconds per Speaker)
 
 ---
 
-## 📋 STAGE STRATEGY & ROSTER OVERVIEW
+## 📋 6-STEP TEAM STRUCTURE & ROLE ROSTER
 
-| Speaker | Name / Role | Assigned Slide | Core Focus | Target Time |
-| :--- | :--- | :--- | :--- | :---: |
-| **Speaker 1** | **Harshit Sharma** (Team Leader) | Slide 1 ➔ Slide 2 | **The Hook, Problem Statement (SIH26223), ARIES Introduction** | **0:00 - 1:00 (60s)** |
-| **Speaker 2** | Hardware & Locomotion Lead | Slide 2 ➔ Slide 3 | **4WD Chassis, Dual-MCU Inductive Noise Isolation, Auto-Brake** | **1:00 - 2:00 (60s)** |
-| **Speaker 3** | Sensors & Biometrics Lead | Slide 3 | **Multi-Hazard Scanning (MQ-135/DHT11), MAX30102 Vitals (BPM/SpO2)** | **2:00 - 3:00 (60s)** |
-| **Speaker 4** | Comms & Edge AI Lead | Slide 3 ➔ Slide 4 | **5 km Sub-GHz LoRa Mesh, GSM Fallback, Human-in-the-Loop AI** | **3:00 - 4:00 (60s)** |
-| **Speaker 5** | Software & Live Demo Operator | Slide 4 | **Web Mission Hub Live Console, Web Serial Telemetry & Rover Demo** | **4:00 - 5:00 (60s)** |
-| **Speaker 6** | Business Viability & Closer | Slide 5 ➔ Slide 6 | **₹50K vs ₹25L Cost Disruption, NDRF Impact, GitHub Repo & Closing** | **5:00 - 6:00 (60s)** |
+| Speaker | Role | Stage Action | Core Focus | Time |
+| :---: | :--- | :--- | :--- | :---: |
+| **Speaker 1** | **Opening & Problem Statement** | Stands Center, addresses judges | Disaster Golden Hour, Rescuer Hazards, ₹25L cost barrier | **0:00 - 0:55** |
+| **Speaker 2** | **Proposed Solution & Innovation** | Points to Slide 2 (Solution) | Introducing ARIES, First-In Scout concept, FLIR Thermal, 5km LoRa | **0:55 - 1:50** |
+| **Speaker 3** | **Hardware & Electronics** | Points to Rover Hardware & Slide 3 | Dual-MCU Isolation, Motors vs Sensors, MQ-135, MAX30102 Vitals | **1:50 - 2:45** |
+| **Speaker 4** | **Software, AI & Connectivity** | Points to Slide 4 & Architecture | Web Mission Hub, ESP32 30 FPS, Edge AI, Tri-Channel LoRa/GSM | **2:45 - 3:40** |
+| **Speaker 5** | **Live Model & Prototype Demo** | **Powers ON Rover & Shows Dashboard** | Live Telemetry, Sonar auto-brake test, OLED display, Web Serial | **3:40 - 4:40** |
+| **Speaker 6** | **Cost, National Impact & Closing** | Points to Slide 5/6 & Repo link | ₹50k vs ₹25L Disruption, NDRF rollout, Closing punchline | **4:40 - 5:35** |
 
 ---
 
 ```
-[ TIMELINE FLOWCHART ]
-0:00        1:00        2:00        3:00        4:00        5:00        6:00 MIN
- ├───────────┼───────────┼───────────┼───────────┼───────────┼───────────┤
-  Speaker 1   Speaker 2   Speaker 3   Speaker 4   Speaker 5   Speaker 6
-  (Hook/PS)   (Hardware)  (Sensors)   (Comms/AI)  (Live Demo) (Cost/Closer)
+[ THE 6-STEP PITCH PIPELINE ]
+  1. PROBLEM ──▶ 2. SOLUTION ──▶ 3. HARDWARE ──▶ 4. SOFTWARE ──▶ 5. LIVE DEMO ──▶ 6. COST & IMPACT
+   (Speaker 1)    (Speaker 2)     (Speaker 3)     (Speaker 4)     (Speaker 5)     (Speaker 6)
 ```
 
 ---
 
-## 🎯 SPEAKER 1: TEAM LEADER (HARSHIT SHARMA)
-**Slide on Screen:** Slide 1 (Cover) ➔ Transition to Slide 2 (Proposed Solution)  
-**Timing:** `0:00` to `1:00` (60 Seconds)  
-**Tone:** Powerful, Authoritative, Eye contact with judges.
-
-### 🎬 Action Cues:
-- Stand in the center. Both hands open. Smile and greet judges with strong voice.
-- At 0:40, gesture towards Slide 2 on the projector screen.
+## 🎯 SPEAKER 1: OPENING & PROBLEM STATEMENT
+- **Slide:** Slide 1 (Title / Cover Slide)
+- **Time:** `0:00` to `0:55` (55 Seconds)
+- **Stage Action:** Center stage. Strong eye contact with judges. Confident and impactful voice.
 
 ### 🗣️ Exact Dialogue (English):
 > "A very good afternoon, Respected Judges and Evaluators.
 > 
-> In any catastrophic disaster—whether it is an earthquake collapse, an industrial gas explosion, or an underground mine hazard—the first 60 minutes are critically known as the **'Golden Hour'**.
+> In any catastrophic disaster—whether it is an earthquake collapse, an industrial gas explosion, or a subterranean mine accident—the first 60 minutes are critically known as the **'Golden Hour'**. 
 > 
-> Currently, emergency services face an impossible dilemma: sending human first-responders or sniffer dogs blindly into structurally unstable rubble risks secondary casualties, toxic asphyxiation, and tragic loss of rescuer lives. On the other hand, imported military rescue robots cost upwards of **₹25 Lakhs**, making them completely inaccessible to local municipal fire brigades and regional response teams.
+> In these critical moments, emergency services face an agonizing dilemma. Sending human rescue workers or sniffer dogs blindly into structurally unstable debris risks secondary cave-ins, toxic gas asphyxiation, and tragic loss of rescuer lives. 
 > 
-> Addressing Problem Statement **SIH26223**, we are **Team ALPHA-X**, and we present **ARIES**: *Autonomous & Remotely-Operated Intelligent Emergency Search-and-Rescue Rover*.
+> On the other hand, imported military-grade disaster robots cost upwards of **₹25 Lakhs**, making them completely unaffordable for local municipal fire stations and regional disaster response forces.
 > 
-> ARIES is a rugged, low-cost first-in reconnaissance scout engineered to penetrate collapsed rubble and GPS-denied hazards *before* human boots touch the ground.
+> Addressing Problem Statement **SIH26223**, we are **Team ALPHA-X**, and we are here to bridge this critical first-response reconnaissance gap.
 > 
-> To explain our core hardware architecture and domain isolation, I invite **Speaker 2**."
+> To present our proposed solution and core concept, I invite **Speaker 2**."
 
 *(Pass mic / nod to Speaker 2)*
 
 ---
 
-## ⚙️ SPEAKER 2: HARDWARE & LOCOMOTION LEAD
-**Slide on Screen:** Slide 2 ➔ Slide 3 (Technical Architecture & Dual-MCU)  
-**Timing:** `1:00` to `2:00` (60 Seconds)  
-**Tone:** Technical, confident, engineering-focused.
-
-### 🎬 Action Cues:
-- Step forward. Point directly at the physical Rover on the table.
-- Emphasize the "Dual-MCU" words with vocal punch.
+## 💡 SPEAKER 2: PROPOSED SOLUTION & INNOVATION
+- **Slide:** Slide 2 (Proposed Solution & Innovation Ecosystem)
+- **Time:** `0:55` to `1:50` (55 Seconds)
+- **Stage Action:** Point to Slide 2 projector screen, energetic and solution-oriented tone.
 
 ### 🗣️ Exact Dialogue (English):
 > "Thank you, Harshit.
 > 
-> In disaster robotics, physical mobility in hostile terrain is paramount. ARIES is built on a high-clearance, 4-wheel differential drive chassis powered by geared high-torque DC motors, capable of traversing uneven debris and steep inclines.
+> Our solution is **ARIES**: *Autonomous and Remotely-Operated Intelligent Emergency Search-and-Rescue Rover*.
 > 
-> But our greatest engineering innovation lies in our **Decoupled Dual-MCU Domain Isolation**.
+> ARIES is a rugged, low-cost, all-terrain first-in reconnaissance scout engineered to enter confined, GPS-denied disaster hazards *before* human boots touch the ground.
 > 
-> In conventional hobbyist rovers, driving high-current DC motors generates heavy inductive back-EMF noise and voltage brownout spikes. When sensors and motors share a single microcontroller, this electrical noise freezes the I2C bus and crashes the telemetry.
+> ARIES operates on three foundational innovations:
+> 1. **Zero-Human-Risk First Look:** It penetrates toxic and collapsed rubble to deliver live situational awareness directly to incident commanders during the Golden Hour.
+> 2. **Dual-Spectrum Vision Core:** Combining high-definition optical streaming with an integrated **FLIR Micro-Thermal Core**, ARIES spots trapped survivor body heat (37°C) even through dense smoke, dust, and total darkness.
+> 3. **Deep-Rubble Sub-Surface Comms:** Utilizing a **5 km Sub-GHz LoRa Mesh (868/915 MHz)**, ARIES maintains an unbroken telemetry lifeline through dense concrete where standard Wi-Fi and 4G fail completely.
 > 
-> In ARIES, we strictly isolated the domains:
-> - **Arduino UNO #1** functions exclusively as the High-Current Drive Controller via an L293D motor driver with independent buck-regulated power.
-> - **Arduino UNO #2** acts as a completely isolated, noise-free **Master Sensor Hub**.
-> 
-> Furthermore, front-mounted ultrasonic sonar provides autonomous hardware auto-braking whenever an obstacle is detected within 25 cm, preventing collisions in zero-visibility dust.
-> 
-> To detail our multi-sensor perception and world-first biometric life-detection, here is **Speaker 3**."
+> To break down the internal embedded hardware and sensor electronics, over to **Speaker 3**."
 
 *(Pass mic / nod to Speaker 3)*
 
 ---
 
-## 🔍 SPEAKER 3: SENSORS & BIOMETRICS SPECIALIST
-**Slide on Screen:** Slide 3 (Perception Stack & MAX30102 Vitals)  
-**Timing:** `2:00` to `3:00` (60 Seconds)  
-**Tone:** Clear, scientifically precise, enthusiastic.
-
-### 🎬 Action Cues:
-- Point at the sensor array on the Rover (MQ-135, DHT11, OLED, MAX30102).
-- Highlight the "MAX30102 Biometrics" as the killer differentiator.
+## ⚙️ SPEAKER 3: HARDWARE & ELECTRONICS ARCHITECTURE
+- **Slide:** Slide 3 (Technical Approach & Hardware Architecture)
+- **Time:** `1:50` to `2:45` (55 Seconds)
+- **Stage Action:** Step up near the physical Rover on the table. Point to the chassis, boards, and sensors.
 
 ### 🗣️ Exact Dialogue (English):
 > "Thank you.
 > 
-> A rescue rover is only as valuable as the life-saving intelligence it gathers. ARIES carries a comprehensive multi-modal environmental and vital sensor payload:
+> When engineering a rescue rover, hardware reliability in harsh physical terrain is non-negotiable. ARIES is built on a 4-wheel differential high-torque drive chassis.
 > 
-> 1. **Atmospheric Toxicity:** An onboard **MQ-135 gas sensor** continuously maps concentrations of Carbon Monoxide, Methane, and toxic combustion smoke in real-time PPM.
-> 2. **Subterranean Micro-Climate:** A **DHT11 sensor** tracks ambient temperature and humidity, while a **BMP280 barometric sensor** estimates relative depth in collapsed basement voids.
-> 3. **Chassis Safety:** An **MPU6500 6-DOF IMU** continuously monitors pitch and roll, auto-throttling motors if the chassis exceeds a 30-degree tilt to eliminate rollover risk.
+> Our most critical engineering breakthrough is **Decoupled Dual-MCU Domain Isolation**:
+> In conventional rovers, running high-current DC motors generates heavy inductive back-EMF noise. This noise travels across the power rails, crashing I2C sensor lines and freezing the microcontroller. 
 > 
-> But our primary global breakthrough is **Proximity Survivor Vitals Detection**. Using an integrated **MAX30102 biometric pulse oximetry sensor**, ARIES confirms trapped survivor presence by detecting heartbeat (BPM) and blood oxygen (SpO2) upon proximity.
+> We completely isolated the domains:
+> - **Arduino UNO #1** functions solely as the High-Current Drive Controller via an L293D shield with dedicated buck-regulated power.
+> - **Arduino UNO #2** operates as a clean, noise-free **Master Sensor Hub**.
 > 
-> This enables **Thermal-Gas-Vital Fusion**: triage medics receive vital signs and ambient toxicity *before* heavy excavation even starts! An onboard 0.96-inch OLED displays these readings directly to field responders.
+> Our sensor payload includes an **MQ-135 gas sensor** for real-time toxic PPM mapping, a **DHT11** for ambient climate, a **BMP280** for barometric depth estimation, and an **MPU6500 IMU** for active anti-rollover tilt protection.
 > 
-> Now, **Speaker 4** will explain our resilient deep-rubble communications and edge vision."
+> Furthermore, we integrated a **MAX30102 biometric pulse oximeter**, allowing the rover to detect a trapped survivor's heartbeat (BPM) and blood oxygen (SpO2) upon proximity.
+> 
+> Now, **Speaker 4** will detail our software stack, AI, and connectivity pipeline."
 
 *(Pass mic / nod to Speaker 4)*
 
 ---
 
-## 📡 SPEAKER 4: COMMS & EDGE AI SPECIALIST
-**Slide on Screen:** Slide 3 (Tri-Channel Comms) ➔ Slide 4 (Challenges & Mitigation)  
-**Timing:** `3:00` to `4:00` (60 Seconds)  
-**Tone:** Firm, solving real-world constraints, sharp.
-
-### 🎬 Action Cues:
-- Hold up or gesture toward the antennas / ESP32-CAM on the rover.
-- Highlight the phrase "Human-in-the-Loop" to impress judges on AI safety.
+## 💻 SPEAKER 4: SOFTWARE, AI & CONNECTIVITY
+- **Slide:** Slide 4 (Technical Feasibility, Comms & AI Workflow)
+- **Time:** `2:45` to `3:40` (55 Seconds)
+- **Stage Action:** Point to the software architecture and highlight "Human-in-the-Loop AI".
 
 ### 🗣️ Exact Dialogue (English):
 > "Thank you.
 > 
-> In disaster zones, traditional communication infrastructure is the first casualty. Standard 2.4 GHz Wi-Fi and 4G cellular signals attenuate drastically through three meters of reinforced concrete and debris.
+> The intelligence of ARIES is powered by a multi-tier software and resilient communication pipeline.
 > 
-> To solve this, ARIES implements a **Tri-Channel Resilient Communication Pipeline**:
-> 1. **High-Bandwidth Local Vision:** An onboard **ESP32-CAM** streams 30 FPS low-latency video and dual-spectrum thermal overlays over a local SoftAP Wi-Fi network.
-> 2. **Deep-Rubble Lifeline:** In sub-surface concrete shafts where Wi-Fi drops, ARIES seamlessly switches to a **5 km Sub-GHz LoRa Mesh (868/915 MHz)**, penetrating dense concrete to maintain an unbroken telemetry bridge.
-> 3. **Cellular Fallback:** A dedicated **SIM800L GSM engine** dispatches automated SMS emergency beacons containing survivor coordinates directly to Incident Commanders' phones.
+> 1. **Tri-Channel Resilient Comms:**
+>    - For line-of-sight operations, our onboard **ESP32 Core** hosts a local SoftAP Wi-Fi network, streaming 30 FPS low-latency video.
+>    - In sub-surface concrete rubble, telemetry automatically routes through our **5 km Sub-GHz LoRa Mesh**.
+>    - For long-range emergency beaconing, a dedicated **SIM800L GSM module** sends automated SOS SMS alerts with survivor coordinates directly to emergency personnel.
 > 
-> Crucially, for survivor detection, we implement a **Human-in-the-Loop AI Protocol**. Edge vision flags potential survivor heat signatures, but the incident commander must visually verify the target on HUD before dispatching emergency teams. This eliminates 100% of false alarms from fire embers or heated pipes.
+> 2. **Human-in-the-Loop AI Protocol:**
+>    Rather than relying on black-box automated triggers that risk false emergency dispatches from hot pipes or fire embers, our edge computer vision flags survivor candidates, but requires **manual verification by the Incident Commander** on the HUD before dispatching the rescue team—ensuring 100% false-alarm elimination.
 > 
-> Now, **Speaker 5** will demonstrate our live Mission Hub Command Console."
+> 3. **Web Mission Hub:**
+>    Built using HTML5, CSS3, and browser Web Serial API, our command console runs on any laptop or tablet without installing proprietary drivers.
+> 
+> Now, let us demonstrate this system live. Over to **Speaker 5**."
 
 *(Pass mic / nod to Speaker 5)*
 
 ---
 
-## 💻 SPEAKER 5: SOFTWARE & LIVE DEMO LEAD
-**Slide on Screen:** Slide 4 (PoC Validation) + Web Mission Hub on Laptop/Screen  
-**Timing:** `4:00` to `5:00` (60 Seconds)  
-**Tone:** Dynamic, hands-on, showing real-time working hardware.
-
-### 🎬 Action Cues:
-- **Turn ON Rover power switch** (show OLED lighting up).
-- On the laptop screen, show the Web Mission Hub console (`joyful-cactus-9b247c.netlify.app` / `localhost:8080`).
-- Point to live dials (Gas PPM, Distance, Temp, Status) updating.
+## 🤖 SPEAKER 5: LIVE WORKING MODEL & TELEMETRY DEMO
+- **Focus:** Live Physical Rover & Laptop Screen Displaying Web Mission Hub
+- **Time:** `3:40` to `4:40` (60 Seconds)
+- **Stage Action:** **Power switch ON karo** (OLED screen glow karegi). Laptop screen par Web Mission Hub me live dials dikhao. Hand move karke sonar auto-stop dikhao.
 
 ### 🗣️ Exact Dialogue (English):
-> "Thank you.
+> "Thank you!
 > 
-> Respected Judges, what you see before you is not a theoretical CAD model—it is a **fully functional, scaled working prototype**.
+> Respected Judges, what you see here is not just a presentation—it is a **fully functional, scaled working prototype**.
 > 
-> As you can see on screen, this is our **ARIES Web Mission Hub**, accessible from any browser without installing proprietary software.
+> *(Actions while speaking):*
+> As I power ON the rover:
+> - You can see our **0.96-inch onboard OLED field display** instantly initialize, providing direct visual feedback to first-responders right at the debris edge.
+> - Connecting to our **Web Mission Hub** on screen, our Master Hub streams telemetry packets via Web Serial every 10 seconds:
+>   - Here is our **live MQ-135 Gas toxicity dial**, actively monitoring environmental PPM.
+>   - Here is our **ambient temperature and humidity telemetry**.
+>   - And here is our **ultrasonic distance radar**. When an obstacle approaches within 25 cm—*(place hand in front of sonar)*—the rover triggers an autonomous safety lock, preventing collisions in dust.
 > 
-> Connecting directly via browser Web Serial API to our Master Hub, the dashboard streams live telemetry:
-> - Here is our **real-time MQ-135 Gas toxicity gauge**, alerting in amber and red if hazard thresholds are breached.
-> - Here is the **ambient temperature and humidity telemetry**.
-> - And here is our **ultrasonic distance radar**, transmitting distance readings at steady 10-second telemetry intervals.
+> The operator has complete teleoperation control and instant SOS alert dispatch triggers right from this lightweight browser interface.
 > 
-> On the video feed side, the operator receives live first-person visual intelligence with teleoperation controls and instant emergency SOS dispatch triggers.
-> 
-> Every packet, sensor readout, and command pipeline has been validated end-to-end on embedded silicon.
-> 
-> To present our economic feasibility, national impact, and conclusion, I invite **Speaker 6**."
+> To discuss our cost disruption, national impact, and closing vision, here is **Speaker 6**."
 
 *(Pass mic / nod to Speaker 6)*
 
 ---
 
-## 🏆 SPEAKER 6: BUSINESS FEASIBILITY & CLOSING PITCH
-**Slide on Screen:** Slide 5 (Impact & Beneficiaries) ➔ Slide 6 (Standards, Citations & Repo)  
-**Timing:** `5:00` to `6:00` (60 Seconds)  
-**Tone:** Inspiring, high energy, confident, climactic closing.
-
-### 🎬 Action Cues:
-- Transition slide to Slide 6 (References, Standards & GitHub Repo).
-- Point to the GitHub link and live Netlify link on the screen.
-- Deliver the final sentence with pride and pause for applause!
+## 🏆 SPEAKER 6: COST DISRUPTION, NATIONAL IMPACT & CLOSING
+- **Slide:** Slide 5 (Impact) ➔ Slide 6 (Research, Standards & GitHub Repo)
+- **Time:** `4:40` to `5:35` (55 Seconds)
+- **Stage Action:** Transition to Slide 6. Point to GitHub link and live Netlify link on screen. High energy and proud closing.
 
 ### 🗣️ Exact Dialogue (English):
 > "Thank you.
 > 
-> Let us look at the economic reality. Military-grade search-and-rescue rovers currently cost between **₹25 to ₹30 Lakhs** ($25,000+), locking out municipal rescue stations.
+> Let us address the most crucial question: **Economic Viability**.
 > 
-> By utilizing modular Commercial-Off-The-Shelf architecture, our basic working prototype was fabricated under **₹8,000 INR**, and our ruggedized, IP67 industrial production model has a target unit cost of under **₹50,000 INR**—representing an unprecedented **10x to 20x cost advantage**!
+> Existing commercial search-and-rescue rovers cost upwards of **₹25 to ₹30 Lakhs**, placing them out of reach for municipal budgets.
 > 
-> This democratizes search-and-rescue technology for:
-> 1. **NDRF and State SDRF battalions** for rapid building collapse reconnaissance.
-> 2. **Municipal Fire Services** for pre-entry smoke and toxic gas scans.
-> 3. **Mining and Tunnel Authorities** for hazardous deep-shaft inspections.
+> By utilizing modular Commercial-Off-The-Shelf architecture, our basic working prototype was fabricated under **₹8,000 INR**, and our ruggedized IP67 enterprise production model has a target unit cost of under **₹50,000 INR**—representing an unprecedented **10x to 20x cost disruption**!
 > 
-> Our system adheres to **NDMA Urban Search & Rescue guidelines** and NDRF Standard Operating Procedures for hazardous entry. Furthermore, our complete Dual-MCU firmware, schematics, and Mission Hub software are completely open-source on our **official GitHub repository** shown on Slide 6.
+> This enables wide-scale national adoption across:
+> - **NDRF and State SDRF battalions** for rapid structural collapse search.
+> - **Municipal Fire Departments** for toxic gas and basement fire reconnaissance.
+> - **Mining and Tunnel Authorities** for deep subterranean shaft inspections.
 > 
-> Respected Judges, at Team ALPHA-X, our motto is:  
+> Our system complies with **NDMA Urban Search & Rescue guidelines** and NDRF Standard Operating Procedures. Furthermore, our complete Dual-MCU firmware, schematics, and Mission Hub code are fully open-source on our **official GitHub repository** shown on Slide 6.
+> 
+> Respected Judges, at Team ALPHA-X, we firmly believe:  
 > **'We don't just build robots, we build hope.'**
 > 
-> Thank you, and we are now open for your questions!"
+> Thank you, and we are now ready for your questions!"
 
-*(All 6 team members stand straight, smile, and look at judges ready for Q&A)*
+*(All 6 members stand tall, smile, and look at the judges ready for Q&A)*
 
 ---
 
-## 🛡️ TOP 5 JUDGES' CROSS-QUESTIONS (Q&A CHEAT SHEET)
+## 🛡️ TOP 5 JUDGES' CROSS-QUESTIONS (READY-MADE DEFENSE)
 
-### ❓ Question 1: "Why Dual-MCU? Why couldn't an ESP32 or single Arduino do everything?"
-- **Answered by:** Speaker 2 or Speaker 1
-> *"Sir, rescue environments demand 99.9% fault tolerance. When 4 high-torque DC motors stall in heavy rubble, they create massive back-EMF inductive spikes and draw up to 2-3 Amperes. In a single-MCU design, these electrical noise spikes disrupt the I2C bus and reset the microcontroller, blinding the operator. Our Dual-MCU architecture provides absolute physical domain isolation: motors run on Arduino #1, while mission-critical gas sensors and telemetry remain completely uninterrupted on Arduino #2."*
+### ❓ Q1: "Why Dual-MCU? Why not run everything on a single ESP32 or Arduino?"
+- **Answered by:** Speaker 3 (Hardware Lead)
+> *"Sir, rescue missions require 99.9% reliability. High-torque DC motors generate severe inductive back-EMF voltage spikes and high current draws. In a single-MCU architecture, this electrical noise corrupts the I2C sensor bus and triggers brownout resets, blinding the operator. Our Dual-MCU architecture isolates motor drive on Arduino #1 and sensor telemetry on Arduino #2, ensuring zero lockups."*
 
-### ❓ Question 2: "Wi-Fi doesn't penetrate concrete rubble. How will your rover communicate?"
-- **Answered by:** Speaker 4
-> *"Exactly, Sir! 2.4 GHz Wi-Fi attenuates after just 1-2 meters of concrete. That is why Wi-Fi is used only for line-of-sight video. For sub-surface penetration, ARIES automatically routes telemetry through our **5 km Sub-GHz LoRa Mesh operating at 868/915 MHz**. Sub-GHz radio waves have significantly longer wavelengths that diffract through concrete voids where Wi-Fi drops completely. Additionally, our SIM800L module provides an independent GSM SMS fallback."*
+### ❓ Q2: "Wi-Fi cannot penetrate deep concrete rubble. How will communication work underground?"
+- **Answered by:** Speaker 4 (Comms Lead)
+> *"Exactly, Sir! 2.4 GHz Wi-Fi drops within 1 to 2 meters of concrete. That is why ARIES uses Wi-Fi strictly for surface line-of-sight video. For sub-surface penetration, ARIES automatically switches to our **5 km Sub-GHz LoRa Mesh (868/915 MHz)**. Sub-GHz radio waves have significantly longer wavelengths that diffract through concrete voids where high-frequency signals fail. Additionally, SIM800L cellular GSM provides SMS fallback."*
 
-### ❓ Question 3: "How does your rover avoid false alarms from hot debris or fire embers?"
+### ❓ Q3: "How do you prevent false alarms caused by hot steam pipes or fire embers?"
 - **Answered by:** Speaker 3 or Speaker 4
-> *"Sir, that is solved through our **Two-Tier Verification Protocol**:*
-> *First, thermal camera heat detection is cross-referenced with our **MAX30102 biometric sensor**, which looks for actual physiological human heartbeat (BPM) and blood oxygen (SpO2). Fire embers and hot pipes do not produce a pulse!*
-> *Second, we enforce **Human-in-the-Loop AI**: the AI flags the candidate on the HUD, but emergency SOS dispatch requires the Incident Commander's manual confirmation. Zero false alerts are broadcast."*
+> *"Sir, we implement a **Two-Tier Verification Protocol**:*
+> *First, our **MAX30102 biometric sensor** verifies physiological human heartbeat (BPM) and blood oxygen (SpO2)—fire embers and hot pipes do not have a pulse!*
+> *Second, our **Human-in-the-Loop AI** requires the Incident Commander to manually confirm the visual/thermal target before any emergency rescue alert is dispatched. This guarantees 100% false-alarm elimination."*
 
-### ❓ Question 4: "What happens if the rover flips upside down in steep debris?"
+### ❓ Q4: "What happens if the rover flips upside down in steep debris?"
 - **Answered by:** Speaker 2 or Speaker 5
-> *"Sir, we have two layers of protection:*
-> *Active Protection: Our onboard MPU6500 6-DOF IMU tracks real-time pitch and roll angles. If the chassis tilts beyond 30 degrees, the drive controller automatically engages hardware auto-braking to prevent a rollover.*
-> *In our enterprise design, ARIES utilizes a symmetrical invertible chassis geometry with large diameter wheels, allowing the rover to operate and drive continuously even if inverted."*
+> *"Sir, our onboard MPU6500 IMU tracks real-time pitch and roll angles, automatically braking the rover if tilt exceeds 30 degrees to prevent rollovers. In our enterprise design, ARIES utilizes a symmetrical invertible chassis with oversized wheels, allowing the rover to continue driving even if inverted."*
 
-### ❓ Question 5: "How did you achieve a ₹50,000 cost when commercial rovers cost ₹25 Lakhs?"
-- **Answered by:** Speaker 6
-> *"Sir, foreign defense rovers carry massive proprietary markups, classified military radios, and expensive overseas service contracts. ARIES is designed on **Modular COTS (Commercial-Off-The-Shelf) architecture**. By leveraging open-source embedded silicon (ATmega + ESP32), standardized Sub-GHz LoRa transceivers, and localized 3D printed rugged nylon frames, our prototype BOM is under ₹8,000, and our industrial batch production model scales under ₹50,000 INR."*
+### ❓ Q5: "How did you bring the cost down to ₹50,000 when imported rovers cost ₹25 Lakhs?"
+- **Answered by:** Speaker 6 (Business Lead)
+> *"Sir, imported defense rovers carry high military markups, proprietary communication protocols, and expensive overseas service contracts. ARIES leverages standard Commercial-Off-The-Shelf embedded components (ATmega, ESP32, standardized LoRa) and localized modular fabrication, reducing the prototype BOM under ₹8,000 and the industrial enterprise version under ₹50,000 INR."*
 
 ---
 
-## ⚡ FINAL REHEARSAL CHECKLIST (FOR TODAY - 21 SEPT)
-
-- [ ] **Stopwatch Drill:** Run all 6 speeches back-to-back 3 times with a phone timer. Total pitch must finish between **5:15 and 5:45 minutes**.
-- [ ] **Handover Cues:** Practice the exact handover sentences ("I invite Speaker 2...", "Here is Speaker 3...", etc.).
-- [ ] **Physical Hardware Test:** Turn on Rover switch at 4:00 when Speaker 5 speaks. OLED screen should show live readings.
-- [ ] **Open Browser Tabs Before Entering Room 440:**
-  1. Slide deck (`SIH2026_ARIES_ALPHA-X.pptx` or full-screen PNG viewer)
-  2. Web Mission Hub (`joyful-cactus-9b247c.netlify.app` or `http://localhost:8080`)
-  3. GitHub Repo (`github.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover`)
-- [ ] **Charge Everything to 100%:** Laptop, rover 18650 batteries, mobile hotspot phone.
+## ⚡ TODAY'S ACTION PLAN (21 SEPT DRILL)
+1. **Stopwatch Rehearsal:** Ek phone par stopwatch lagao aur puri team 3 baar back-to-back rehearsal kare. **Target: 5:20 to 5:40 minutes!**
+2. **Speaker 5 Timing:** 3 minute 40 second par Speaker 5 rover ka switch ON karega aur Web Mission Hub screen par dikhayega.
+3. **Keep Tabs Ready:** Laptop me `SIH2026_ARIES_ALPHA-X.pptx` + Web Mission Hub dashboard tab pehle se open rakhna.
+4. **Batteries 100% Charge:** Raat ko rover ki batteries aur laptop full charge kar lena!
