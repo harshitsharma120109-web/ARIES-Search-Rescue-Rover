@@ -1,4 +1,4 @@
-﻿$port = 8080
+$port = 8080
 $root = $PSScriptRoot
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
@@ -35,6 +35,8 @@ try {
                 ".jpeg" { "image/jpeg" }
                 ".json" { "application/json" }
                 ".ico"  { "image/x-icon" }
+                ".pdf"  { "application/pdf" }
+                ".pptx" { "application/vnd.openxmlformats-officedocument.presentationml.presentation" }
                 default { "application/octet-stream" }
             }
             $response.ContentType = $mime
