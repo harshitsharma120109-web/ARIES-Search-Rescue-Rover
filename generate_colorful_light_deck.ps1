@@ -76,89 +76,27 @@ function Add-LightHeader($slide, $badgeLeft, $titleText, $badgeMid) {
     $b2.TextFrame.TextRange.Font.Size = 10
     $b2.TextFrame.TextRange.Font.Color.RGB = $cBlue
 
-    # Dedicated SIH Logo Placeholder Box
-    $logoBox = $slide.Shapes.AddShape(5, 875, 7, 65, 34)
-    $logoBox.Fill.Solid(); $logoBox.Fill.ForeColor.RGB = $tAmber
-    $logoBox.Line.ForeColor.RGB = $cAmber; $logoBox.Line.Weight = 1.5
-    $logoBox.TextFrame.TextRange.Text = "[SIH LOGO]"
-    $logoBox.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue
-    $logoBox.TextFrame.TextRange.Font.Size = 8
-    $logoBox.TextFrame.TextRange.Font.Color.RGB = $cAmber
+    # Real Official SIH Logo Image in Top-Right
+    $logoImg = Join-Path $assetDir "sih_official_logo.png"
+    if (Test-Path $logoImg) {
+        $logoPic = $slide.Shapes.AddPicture($logoImg, [Microsoft.Office.Core.MsoTriState]::msoFalse, [Microsoft.Office.Core.MsoTriState]::msoTrue, 868, 6, 76, 36)
+    } else {
+        $logoBox = $slide.Shapes.AddShape(5, 875, 7, 65, 34)
+        $logoBox.Fill.Solid(); $logoBox.Fill.ForeColor.RGB = $tAmber
+        $logoBox.Line.ForeColor.RGB = $cAmber; $logoBox.Line.Weight = 1.5
+        $logoBox.TextFrame.TextRange.Text = "SIH 2026"
+    }
 }
 
 # ========================================================
-# SLIDE 1: COVER SLIDE (COLORFUL & HIGH IMPACT)
+# SLIDE 1: OFFICIAL MANDATORY SIH COVER TEMPLATE
+# (Exact layout & details provided by Poornima University / SIH)
 # ========================================================
 $s1 = $pres.Slides.Add(1, 12)
-$bg1 = $s1.Shapes.AddShape(1, 0, 0, 960, 540); $bg1.Fill.Solid(); $bg1.Fill.ForeColor.RGB = $cBg; $bg1.Line.Visible = [Microsoft.Office.Core.MsoTriState]::msoFalse
-Add-LightHeader $s1 "ALPHA-X | SIH_1186" "SMART INDIA HACKATHON 2026" "PS ID: SIH26223 | HARDWARE"
-
-# Hero Left Container (White with Soft Border)
-$s1Card = $s1.Shapes.AddShape(5, 20, 60, 480, 415)
-$s1Card.Fill.Solid(); $s1Card.Fill.ForeColor.RGB = $cWhite
-$s1Card.Line.ForeColor.RGB = $cBorder; $s1Card.Line.Weight = 1.5
-
-# Category Pill (Sky Blue Tint)
-$catPill = $s1.Shapes.AddShape(5, 36, 74, 260, 24)
-$catPill.Fill.Solid(); $catPill.Fill.ForeColor.RGB = $tBlue
-$catPill.Line.ForeColor.RGB = $cBlue; $catPill.Line.Weight = 1
-$catPill.TextFrame.TextRange.Text = "AICTE STUDENT INNOVATION (DISASTER MGMT)"
-$catPill.TextFrame.TextRange.Font.Size = 8.5; $catPill.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue
-$catPill.TextFrame.TextRange.Font.Color.RGB = $cBlue
-
-# Project Title
-$t1 = $s1.Shapes.AddTextbox(1, 32, 102, 450, 55)
-$t1.TextFrame.TextRange.Text = "ARIES 2.0"
-$t1.TextFrame.TextRange.Font.Size = 44; $t1.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue
-$t1.TextFrame.TextRange.Font.Color.RGB = $cOrange
-
-# Subtitle
-$st1 = $s1.Shapes.AddTextbox(1, 34, 154, 450, 38)
-$st1.TextFrame.TextRange.Text = "Tri-Phibian All-Domain Autonomous Search-and-Rescue Robot"
-$st1.TextFrame.TextRange.Font.Size = 13.5; $st1.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue
-$st1.TextFrame.TextRange.Font.Color.RGB = $cDarkNavy
-
-# 4 Colorful Capability Cards (2x2 Grid)
-$caps = @(
-    @{Icon="🚜"; Name="Tank Treads"; Desc="Climb 45° collapsed debris"; Fill=$tGreen; Line=$cGreen; TextCol=$cGreen},
-    @{Icon="🚁"; Name="Octocopter Drone"; Desc="8 rotors hop over deep trenches"; Fill=$tBlue; Line=$cBlue; TextCol=$cBlue},
-    @{Icon="🚢"; Name="Amphibious Hull"; Desc="IP68 pontoon floats & steers"; Fill=$tTeal; Line=$cTeal; TextCol=$cTeal},
-    @{Icon="🦾"; Name="Bionic SpO2 Arm"; Desc="Scans pulse & SpO2 in 10cm voids"; Fill=$tRose; Line=$cRose; TextCol=$cRose}
-)
-for ($i=0; $i -lt 4; $i++) {
-    $row = [math]::Floor($i / 2); $col = $i % 2
-    $cx = 36 + ($col * 224); $cy = 196 + ($row * 72)
-    $cBox = $s1.Shapes.AddShape(5, $cx, $cy, 214, 62)
-    $cBox.Fill.Solid(); $cBox.Fill.ForeColor.RGB = $caps[$i].Fill
-    $cBox.Line.ForeColor.RGB = $caps[$i].Line; $cBox.Line.Weight = 1.2
-    $cBox.TextFrame.TextRange.Text = "$($caps[$i].Icon) $($caps[$i].Name)`r`n$($caps[$i].Desc)"
-    $cBox.TextFrame.TextRange.Paragraphs(1).Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $cBox.TextFrame.TextRange.Paragraphs(1).Font.Size = 10.5; $cBox.TextFrame.TextRange.Paragraphs(1).Font.Color.RGB = $caps[$i].TextCol
-    $cBox.TextFrame.TextRange.Paragraphs(2).Font.Size = 8; $cBox.TextFrame.TextRange.Paragraphs(2).Font.Color.RGB = $cTextDark
+$imgS1 = Join-Path $assetDir "official_sih_slide_1.png"
+if (Test-Path $imgS1) {
+    $picS1 = $s1.Shapes.AddPicture($imgS1, [Microsoft.Office.Core.MsoTriState]::msoFalse, [Microsoft.Office.Core.MsoTriState]::msoTrue, 0, 0, 960, 540)
 }
-
-# Team Lead Card (Orange Tinted)
-$leadCard = $s1.Shapes.AddShape(5, 36, 348, 448, 105)
-$leadCard.Fill.Solid(); $leadCard.Fill.ForeColor.RGB = $tOrange
-$leadCard.Line.ForeColor.RGB = $cOrange; $leadCard.Line.Weight = 1.5
-$leadCard.TextFrame.TextRange.Text = "Team Leader: Harshit Sharma  |  Team: ALPHA-X (ID: SIH_1186)`r`nInstitute: Poornima University, Jaipur  |  Category: Hardware & Edge AI`r`nKey Novelty: Autonomous 3D Rescue Blueprint & Vitals Triage for NDRF`r`n'We don't just build robots, we build hope.'"
-$leadCard.TextFrame.TextRange.Paragraphs(1).Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $leadCard.TextFrame.TextRange.Paragraphs(1).Font.Size = 10; $leadCard.TextFrame.TextRange.Paragraphs(1).Font.Color.RGB = $cDarkNavy
-$leadCard.TextFrame.TextRange.Paragraphs(2).Font.Size = 8.5; $leadCard.TextFrame.TextRange.Paragraphs(2).Font.Color.RGB = $cTextGray
-$leadCard.TextFrame.TextRange.Paragraphs(3).Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $leadCard.TextFrame.TextRange.Paragraphs(3).Font.Size = 8.5; $leadCard.TextFrame.TextRange.Paragraphs(3).Font.Color.RGB = $cPurple
-$leadCard.TextFrame.TextRange.Paragraphs(4).Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $leadCard.TextFrame.TextRange.Paragraphs(4).Font.Size = 9.5; $leadCard.TextFrame.TextRange.Paragraphs(4).Font.Color.RGB = $cOrange
-
-# Right Hero Photo
-$imgHero = Join-Path $assetDir "aries_advanced_unified_rover.jpg"
-if (Test-Path $imgHero) {
-    $pic1 = $s1.Shapes.AddPicture($imgHero, [Microsoft.Office.Core.MsoTriState]::msoFalse, [Microsoft.Office.Core.MsoTriState]::msoTrue, 515, 60, 425, 415)
-    $pic1.Line.ForeColor.RGB = $cOrange; $pic1.Line.Weight = 2
-}
-
-# Footer Ribbon
-$bot1 = $s1.Shapes.AddShape(1, 0, 485, 960, 55); $bot1.Fill.Solid(); $bot1.Fill.ForeColor.RGB = $cWhite
-$bot1.Line.ForeColor.RGB = $cBorder; $bot1.Line.Weight = 1
-$botText1 = $s1.Shapes.AddTextbox(1, 20, 492, 920, 40)
-$botText1.TextFrame.TextRange.Text = "Poornima University Internal Hackathon RANK 5 Finalist   |   Theme: Disaster Management   |   GitHub: github.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover"
-$botText1.TextFrame.TextRange.Font.Size = 10.5; $botText1.TextFrame.TextRange.Font.Bold = [Microsoft.Office.Core.MsoTriState]::msoTrue; $botText1.TextFrame.TextRange.Font.Color.RGB = $cOrange
 
 # ========================================================
 # SLIDE 2: PROPOSED SOLUTION & AUTONOMOUS RESCUE PATHWAY
