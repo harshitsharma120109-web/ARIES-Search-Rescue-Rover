@@ -1428,7 +1428,11 @@ const totalSlides = 6;
 function showSlide(n) {
     curSlide = n;
     const img = document.getElementById('mainSlideImg');
-    if (img) img.src = 'assets/images/light_slide_' + n + '.png';
+    if (img) {
+        img.dataset.fallbackTried = 'false';
+        img.onerror = () => handleImageError(img);
+        img.src = 'assets/images/light_slide_' + n + '.png';
+    }
     const counter = document.getElementById('slideCounter');
     if (counter) counter.textContent = 'Slide ' + n + ' of ' + totalSlides;
 
@@ -1460,6 +1464,35 @@ function copyCode(id) {
         });
     }
 }
+
+// --- Global Bulletproof Image Fallback Handler ---
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/harshitsharma120109-web/ARIES-Search-Rescue-Rover/main/';
+
+function handleImageError(img) {
+    if (!img || img.dataset.fallbackTried === 'true') return;
+    img.dataset.fallbackTried = 'true';
+    const originalSrc = img.getAttribute('src') || '';
+    const cleanPath = originalSrc.replace(/^(\.\/|\/)/, '');
+    img.src = GITHUB_RAW_BASE + cleanPath;
+}
+
+// Attach fallback listeners to all existing and future images
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', () => handleImageError(img));
+        if (img.complete && img.naturalWidth === 0) {
+            handleImageError(img);
+        }
+    });
+});
+
+// Also trigger immediately in case DOMContentLoaded already fired
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', () => handleImageError(img));
+    if (img.complete && img.naturalWidth === 0) {
+        handleImageError(img);
+    }
+});
 </script>
 </body>
 </html>
